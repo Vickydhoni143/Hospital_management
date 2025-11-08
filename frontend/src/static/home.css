@@ -1,0 +1,936 @@
+/* src/static/home.css */
+/* Hero Section */
+.hospital-hero {
+  background: linear-gradient(rgba(26, 107, 179, 0.9), rgba(13, 77, 140, 0.95)), url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: var(--hospital-white);
+  padding: 8rem 0;
+  text-align: center;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  min-height: 80vh;
+}
+
+.hospital-hero .hospital-container {
+  width: 100%;
+}
+
+.hospital-hero h2 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hospital-hero p {
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Button Styles */
+.hospital-btn {
+  padding: 14px 28px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.hospital-btn.hospital-btn-primary {
+  background: linear-gradient(135deg, var(--hospital-secondary), var(--hospital-secondary-light));
+  color: var(--hospital-white);
+  box-shadow: 0 4px 15px rgba(52, 168, 83, 0.3);
+}
+
+.hospital-btn.hospital-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(52, 168, 83, 0.4);
+}
+
+.hospital-btn.hospital-btn-secondary {
+  background: transparent;
+  color: var(--hospital-white);
+  border: 2px solid var(--hospital-white);
+}
+
+.hospital-btn.hospital-btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Section Styles */
+.hospital-about-section, .hospital-functionalities, .hospital-feedback-section {
+  padding: 5rem 0;
+  background: var(--hospital-white);
+}
+
+.hospital-functionalities {
+  background: var(--hospital-light);
+}
+
+.hospital-about-section h3,
+.hospital-functionalities h3,
+.hospital-feedback-section h3 {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  color: var(--hospital-primary-dark);
+  font-weight: 700;
+}
+
+/* About Section */
+.hospital-about-content {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.hospital-about-text {
+  flex: 2;
+}
+
+.hospital-about-text p {
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: var(--hospital-dark);
+}
+
+.hospital-about-image {
+  flex: 1;
+  text-align: center;
+}
+
+.hospital-about-image i {
+  font-size: 10rem;
+  color: var(--hospital-primary-light);
+  opacity: 0.8;
+}
+
+/* Functionalities Section */
+.hospital-functionality-tabs {
+  background-color: var(--hospital-white);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+.hospital-tab-buttons {
+  display: flex;
+  background: linear-gradient(135deg, var(--hospital-primary), var(--hospital-primary-dark));
+}
+
+.hospital-tab-btn {
+  flex: 1;
+  padding: 1.5rem;
+  background: transparent;
+  border: none;
+  color: var(--hospital-white);
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-weight: 600;
+}
+
+.hospital-tab-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.hospital-tab-btn.active {
+  background-color: var(--hospital-primary);
+  color: var(--hospital-white);
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.hospital-tab-content {
+  padding: 3rem;
+}
+
+.hospital-tab-content h4 {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  color: var(--hospital-primary-dark);
+  text-align: center;
+  font-weight: 600;
+}
+
+.hospital-features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin: 0;
+}
+
+.hospital-feature-card {
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 220px;
+  margin: 0;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.hospital-feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.hospital-feature-card i {
+  font-size: 3rem;
+  color: var(--hospital-primary);
+  margin-bottom: 1.5rem;
+}
+
+.hospital-feature-card h5 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: var(--hospital-primary-dark);
+  line-height: 1.3;
+  font-weight: 600;
+}
+
+.hospital-feature-card p {
+  color: var(--hospital-gray);
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Center only the AI Health Check feature */
+.hospital-ai-health-check {
+  grid-column: 1 / -1;
+  justify-self: center;
+  max-width: 320px;
+  background: linear-gradient(135deg, #8f23e2 0%, #690cc7 100%);
+  color: white;
+}
+
+.hospital-ai-health-check i,
+.hospital-ai-health-check h5,
+.hospital-ai-health-check p {
+  color: white;
+}
+
+/* Feedback Section */
+.hospital-feedback-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.hospital-feedback-header h3 {
+  margin: 0;
+}
+
+.hospital-feedbacks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.hospital-feedback-card {
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.hospital-feedback-card:hover {
+  transform: translateY(-5px);
+}
+
+.hospital-feedback-header-inner {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.hospital-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--hospital-primary), var(--hospital-primary-dark));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1.5rem;
+}
+
+.hospital-avatar i {
+  color: var(--hospital-white);
+  font-size: 1.5rem;
+}
+
+.hospital-feedback-info h5 {
+  font-size: 1.2rem;
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+}
+
+.hospital-feedback-info span {
+  color: var(--hospital-gray);
+  font-size: 0.9rem;
+}
+
+.hospital-feedback-rating {
+  margin-bottom: 1.5rem;
+}
+
+.star {
+  color: var(--hospital-light-gray);
+  margin-right: 4px;
+  font-size: 1.2rem;
+}
+
+.star.filled {
+  color: var(--hospital-accent);
+}
+
+.hospital-feedback-comment {
+  font-style: italic;
+  color: var(--hospital-dark);
+  margin: 0;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* Modal Styles */
+.hospital-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.hospital-modal {
+  background-color: var(--hospital-white);
+  border-radius: 16px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.hospital-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  border-bottom: 1px solid var(--hospital-light-gray);
+}
+
+.hospital-modal-header h3 {
+  margin: 0;
+  text-align: left;
+  font-size: 1.5rem;
+  color: var(--hospital-primary-dark);
+}
+
+.hospital-close-btn {
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--hospital-gray);
+  transition: color 0.3s;
+}
+
+.hospital-close-btn:hover {
+  color: var(--hospital-dark);
+}
+
+.hospital-modal-body {
+  padding: 2rem;
+}
+
+.hospital-form-group {
+  margin-bottom: 1.5rem;
+}
+
+.hospital-form-group label {
+  display: block;
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+  color: var(--hospital-dark);
+}
+
+.hospital-form-group input,
+.hospital-form-group select,
+.hospital-form-group textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid var(--hospital-light-gray);
+  border-radius: 8px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+  font-family: inherit;
+}
+
+.hospital-form-group input:focus,
+.hospital-form-group select:focus,
+.hospital-form-group textarea:focus {
+  outline: none;
+  border-color: var(--hospital-primary);
+  box-shadow: 0 0 0 3px rgba(26, 107, 179, 0.1);
+}
+
+.hospital-form-group textarea {
+  font-family: inherit;
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Feedback Form Styles */
+.hospital-feedback-form {
+  width: 100%;
+}
+
+/* Responsive Design for Home Page */
+@media (max-width: 1200px) {
+  .hospital-features-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .hospital-hero {
+    padding: 6rem 0;
+    min-height: 60vh;
+  }
+  
+  .hospital-hero h2 {
+    font-size: 2.2rem;
+  }
+  
+  .hospital-hero p {
+    font-size: 1.2rem;
+  }
+  
+  .hospital-about-content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .hospital-features-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .hospital-feedback-header {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .hospital-tab-content {
+    padding: 2rem;
+  }
+  
+  .hospital-about-image i {
+    font-size: 6rem;
+  }
+  
+  /* Center AI Health Check on mobile */
+  .hospital-ai-health-check {
+    grid-column: 1;
+    justify-self: center;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hospital-hero {
+    padding: 4rem 0;
+  }
+  
+  .hospital-hero h2 {
+    font-size: 1.8rem;
+  }
+  
+  .hospital-hero p {
+    font-size: 1rem;
+  }
+  
+  .hospital-features-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .hospital-feature-card {
+    padding: 1.5rem;
+    min-height: auto;
+  }
+  
+  .hospital-modal {
+    width: 95%;
+    margin: 10px;
+  }
+  
+  .hospital-about-section h3,
+  .hospital-functionalities h3,
+  .hospital-feedback-section h3 {
+    font-size: 2rem;
+  }
+  
+  .hospital-tab-buttons {
+    flex-direction: column;
+  }
+  
+  .hospital-tab-btn {
+    padding: 1rem;
+  }
+}
+
+/* src/static/home.css */
+/* ... (keep all existing styles above) ... */
+
+/* Functionalities Section */
+.hospital-functionality-tabs {
+  background-color: var(--hospital-white);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+.hospital-tab-buttons {
+  display: flex;
+  background: linear-gradient(135deg, var(--hospital-white), var(--hospital-white));
+}
+
+.hospital-tab-btn {
+  flex: 1;
+  padding: 1.5rem;
+  background: transparent;
+  border: none;
+  color: var(--hospital-primary);
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-weight: 600;
+}
+
+.hospital-tab-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.hospital-tab-btn.active {
+  background-color: var(--hospital-primary);
+  color: var(--hospital-white);
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.hospital-tab-content {
+  padding: 3rem;
+}
+
+.hospital-tab-content h4 {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  color: var(--hospital-primary-dark);
+  text-align: center;
+  font-weight: 600;
+}
+
+/* Patient Features Grid - Specific layout */
+.hospital-patient-features .hospital-features-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 cards in first row */
+  gap: 2rem;
+  margin: 0;
+}
+
+/* AI Health Check Card - Centered in second row */
+.hospital-patient-features .hospital-ai-health-check {
+  grid-column: 1 / -1; /* Span all columns */
+  justify-self: center; /* Center horizontally */
+  max-width: 320px; /* Same width as other cards */
+  background: linear-gradient(135deg,  #8f23e2 0%, #b187d8 100%);
+  color: white;
+  margin-top: 1rem;
+}
+
+.hospital-patient-features .hospital-ai-health-check i,
+.hospital-patient-features .hospital-ai-health-check h5,
+.hospital-patient-features .hospital-ai-health-check p {
+  color: white;
+}
+
+/* Doctor Features Grid - Keep original auto layout */
+.hospital-doctor-features .hospital-features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin: 0;
+}
+
+/* Feature Cards Common Styles */
+.hospital-feature-card {
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 220px;
+  margin: 0;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.hospital-feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.hospital-feature-card i {
+  font-size: 3rem;
+  color: var(--hospital-primary);
+  margin-bottom: 1.5rem;
+}
+
+.hospital-feature-card h5 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: var(--hospital-primary-dark);
+  line-height: 1.3;
+  font-weight: 600;
+}
+
+.hospital-feature-card p {
+  color: var(--hospital-gray);
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ... (keep all existing styles below) ... */
+
+/* Responsive Design for Home Page */
+@media (max-width: 1200px) {
+  .hospital-patient-features .hospital-features-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+  }
+  
+  .hospital-patient-features .hospital-ai-health-check {
+    grid-column: 1 / -1; /* Still span all columns */
+    justify-self: center;
+    max-width: 320px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hospital-hero {
+    padding: 6rem 0;
+    min-height: 60vh;
+  }
+  
+  .hospital-hero h2 {
+    font-size: 2.2rem;
+  }
+  
+  .hospital-hero p {
+    font-size: 1.2rem;
+  }
+  
+  .hospital-about-content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  /* Single column layout for patient features on mobile */
+  .hospital-patient-features .hospital-features-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .hospital-patient-features .hospital-ai-health-check {
+    grid-column: 1; /* Single column on mobile */
+    justify-self: center;
+    max-width: 100%;
+  }
+  
+  .hospital-doctor-features .hospital-features-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .hospital-feedback-header {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .hospital-tab-content {
+    padding: 2rem;
+  }
+  
+  .hospital-about-image i {
+    font-size: 6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hospital-hero {
+    padding: 4rem 0;
+  }
+  
+  .hospital-hero h2 {
+    font-size: 1.8rem;
+  }
+  
+  .hospital-hero p {
+    font-size: 1rem;
+  }
+  
+  .hospital-feature-card {
+    padding: 1.5rem;
+    min-height: auto;
+  }
+  
+  .hospital-modal {
+    width: 95%;
+    margin: 10px;
+  }
+  
+  .hospital-about-section h3,
+  .hospital-functionalities h3,
+  .hospital-feedback-section h3 {
+    font-size: 2rem;
+  }
+  
+  .hospital-tab-buttons {
+    flex-direction: column;
+  }
+  
+  .hospital-tab-btn {
+    padding: 1rem;
+  }
+}
+
+/* Loading and No Feedback States */
+.hospital-loading,
+.hospital-no-feedback {
+  text-align: center;
+  padding: 3rem;
+  background: var(--hospital-white);
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.hospital-loading p,
+.hospital-no-feedback p {
+  font-size: 1.1rem;
+  color: var(--hospital-gray);
+  margin: 0;
+}
+
+/* Enhanced Modal Styles */
+.hospital-feedback-form {
+  width: 100%;
+}
+
+.hospital-form-group {
+  margin-bottom: 1.5rem;
+}
+
+.hospital-form-group label {
+  display: block;
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+  color: var(--hospital-dark);
+}
+
+.hospital-form-group input,
+.hospital-form-group select,
+.hospital-form-group textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid var(--hospital-light-gray);
+  border-radius: 8px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+  font-family: inherit;
+}
+
+.hospital-form-group input:focus,
+.hospital-form-group select:focus,
+.hospital-form-group textarea:focus {
+  outline: none;
+  border-color: var(--hospital-primary);
+  box-shadow: 0 0 0 3px rgba(26, 107, 179, 0.1);
+}
+
+.hospital-form-group textarea {
+  font-family: inherit;
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Feedback Message Styles */
+.hospital-feedback-message {
+  position: fixed;
+  top: 80px;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 1rem 0;
+  animation: slideDown 0.3s ease-out;
+}
+
+.hospital-feedback-message-success {
+  background: linear-gradient(135deg, #4CAF50, #45a049);
+  color: white;
+}
+
+.hospital-feedback-message-error {
+  background: linear-gradient(135deg, #f44336, #d32f2f);
+  color: white;
+}
+
+.hospital-message-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.hospital-message-icon {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  font-weight: bold;
+}
+
+.hospital-message-text {
+  flex: 1;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.hospital-message-close {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+
+.hospital-message-close:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Loading spinner for submit button */
+.fa-spin {
+  animation: fa-spin 1s infinite linear;
+}
+
+@keyframes fa-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Disabled state for form elements */
+.hospital-form-group input:disabled,
+.hospital-form-group select:disabled,
+.hospital-form-group textarea:disabled,
+.hospital-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.hospital-btn:disabled:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+/* Enhanced modal styles */
+.hospital-close-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Responsive design for message */
+@media (max-width: 768px) {
+  .hospital-feedback-message {
+    top: 70px;
+  }
+  
+  .hospital-message-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+  
+  .hospital-message-icon {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .hospital-feedback-message {
+    top: 60px;
+    padding: 0.8rem 0;
+  }
+  
+  .hospital-message-text {
+    font-size: 0.9rem;
+  }
+}

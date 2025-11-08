@@ -1,0 +1,366 @@
+.medical-reports-section {
+  padding: 20px;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-header h2 {
+  color: #1e88e5;
+  margin-bottom: 10px;
+  font-size: 2.2rem;
+}
+
+.section-header p {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.reports-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 25px;
+}
+
+.report-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e1e5e9;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.report-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.report-header {
+  padding: 20px;
+  background: linear-gradient(135deg, #1e88e5 0%, #1565c0 100%);
+  color: white;
+}
+
+.report-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.report-title h4 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  flex: 1;
+  margin-right: 15px;
+}
+
+.report-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 0.85rem;
+  opacity: 0.9;
+}
+
+.report-body {
+  padding: 20px;
+}
+
+.report-description {
+  color: #666;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.report-file {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #e9ecef;
+}
+
+.report-file i {
+  color: #1e88e5;
+  font-size: 1.2rem;
+}
+
+.file-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.file-name {
+  font-weight: 600;
+  color: #333;
+}
+
+.file-size {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.report-comments {
+  padding: 12px;
+  background: #e3f2fd;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  border-left: 4px solid #1e88e5;
+}
+
+.report-comments strong {
+  color: #1565c0;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.report-comments p {
+  margin: 0;
+  color: #333;
+  line-height: 1.4;
+}
+
+.report-provider {
+  text-align: right;
+  padding-top: 10px;
+  border-top: 1px solid #e9ecef;
+}
+
+.report-provider small {
+  color: #666;
+  font-style: italic;
+}
+
+.report-actions {
+  padding: 0 20px 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.report-actions .hospital-btn {
+  flex: 1;
+  justify-content: center;
+}
+
+/* Status Badges */
+.status-badge {
+  padding: 4px 10px;
+  border-radius: 15px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  white-space: nowrap;
+}
+
+.status-uploaded {
+  background-color: #fff3e0;
+  color: #ef6c00;
+}
+
+.status-reviewed {
+  background-color: #e3f2fd;
+  color: #1565c0;
+}
+
+.status-sent {
+  background-color: #e8f5e8;
+  color: #2e7d32;
+}
+
+.status-archived {
+  background-color: #f5f5f5;
+  color: #666;
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 12px;
+  max-width: 600px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 30px;
+  border-bottom: 1px solid #e9ecef;
+  background: #f8f9fa;
+  border-radius: 12px 12px 0 0;
+}
+
+.modal-header h3 {
+  margin: 0;
+  color: #1e88e5;
+  font-size: 1.5rem;
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #666;
+  padding: 5px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.modal-close:hover {
+  background-color: #e9ecef;
+}
+
+.modal-body {
+  padding: 30px;
+}
+
+.report-details {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.detail-row {
+  display: flex;
+  align-items: flex-start;
+  padding: 12px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.detail-row:last-child {
+  border-bottom: none;
+}
+
+.detail-row label {
+  font-weight: 600;
+  color: #333;
+  min-width: 140px;
+  margin-right: 15px;
+}
+
+.detail-row span {
+  color: #666;
+  flex: 1;
+  line-height: 1.4;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 15px;
+  justify-content: flex-end;
+  padding-top: 20px;
+  border-top: 1px solid #e9ecef;
+}
+
+/* No Data Message */
+.no-data-message {
+  text-align: center;
+  padding: 60px 20px;
+  color: #666;
+}
+
+.no-data-message i {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  color: #bdc3c7;
+}
+
+.no-data-message h3 {
+  color: #666;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+.no-data-message p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .reports-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .report-title {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .report-title h4 {
+    margin-right: 0;
+  }
+  
+  .report-actions {
+    flex-direction: column;
+  }
+  
+  .modal-content {
+    margin: 20px;
+  }
+  
+  .detail-row {
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .detail-row label {
+    min-width: auto;
+  }
+  
+  .modal-actions {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .medical-reports-section {
+    padding: 15px;
+  }
+  
+  .section-header h2 {
+    font-size: 1.8rem;
+  }
+  
+  .report-header,
+  .report-body {
+    padding: 15px;
+  }
+  
+  .modal-body {
+    padding: 20px;
+  }
+  
+  .modal-header {
+    padding: 20px;
+  }
+}

@@ -1,0 +1,323 @@
+/* Contact Us Page Styles */
+.contact-us-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/* Hero Section with Contact Us Badge */
+.contact-hero-section {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 6rem 2rem 4rem;
+  background: linear-gradient(135deg, var(--hospital-primary), var(--hospital-primary-dark));
+  color: white;
+  position: relative;
+}
+
+.contact-us-badge {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 0.75rem 2rem;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 300;
+  margin: 0 0 1rem 0;
+  letter-spacing: 2px;
+  line-height: 1.2;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin: 0;
+  letter-spacing: 1px;
+  opacity: 0.9;
+  text-transform: lowercase;
+}
+
+/* Vertical Layout */
+.contact-content-vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  margin-top: 4rem;
+  padding: 0 2rem;
+}
+
+/* Contact Information Section */
+.contact-info-section {
+  background: var(--hospital-white);
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.12);
+  border: 1px solid var(--hospital-light-gray);
+  margin-top: -4rem;
+  position: relative;
+  z-index: 2;
+}
+
+.contact-info-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.contact-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding: 2rem;
+  background: var(--hospital-light-bg);
+  border-radius: 15px;
+  border-left: 5px solid var(--hospital-primary);
+  transition: all 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.card-icon {
+  font-size: 2rem;
+  margin-top: 0.25rem;
+  flex-shrink: 0;
+}
+
+.card-content {
+  flex: 1;
+}
+
+.card-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--hospital-primary-dark);
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.5px;
+}
+
+.card-text {
+  color: var(--hospital-gray);
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+.emergency-number {
+  color: #dc2626;
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+.email {
+  color: var(--hospital-primary);
+  font-weight: 600;
+}
+
+/* Enquire Now Section */
+.enquire-now-section {
+  background: var(--hospital-white);
+  padding: 3rem;
+  border-radius: 25px;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.12);
+  border: 1px solid var(--hospital-light-gray);
+}
+
+.section-title-main {
+  font-size: 2.2rem;
+  font-weight: 300;
+  margin-bottom: 2.5rem;
+  color: var(--hospital-primary-dark);
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+/* Enquiry Form Styles */
+.enquiry-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group.full-width {
+  grid-column: 1 / -1;
+}
+
+.form-group label {
+  font-weight: 500;
+  color: var(--hospital-primary-dark);
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 15px 20px;
+  border: 2px solid var(--hospital-light-gray);
+  border-radius: 10px;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  background-color: var(--hospital-white);
+  color: var(--hospital-dark);
+  font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--hospital-primary);
+  box-shadow: 0 0 0 4px rgba(26, 107, 179, 0.15);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 140px;
+  font-family: inherit;
+}
+
+.submit-btn {
+  background: linear-gradient(135deg, var(--hospital-primary), var(--hospital-primary-dark));
+  color: white;
+  border: none;
+  padding: 16px 40px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+  letter-spacing: 1px;
+  width: 100%;
+}
+
+.submit-btn:hover {
+  background: linear-gradient(135deg, var(--hospital-primary-dark), var(--hospital-primary));
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(26, 107, 179, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+  .contact-info-cards {
+    grid-template-columns: 1fr;
+  }
+  
+  .contact-info-section,
+  .enquire-now-section {
+    padding: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-hero-section {
+    padding: 5rem 1.5rem 3rem;
+  }
+  
+  .contact-us-badge {
+    position: relative;
+    top: auto;
+    left: auto;
+    display: inline-block;
+    margin-bottom: 2rem;
+  }
+  
+  .hero-title {
+    font-size: 2.2rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .section-title-main {
+    font-size: 1.8rem;
+  }
+  
+  .contact-card {
+    padding: 1.5rem;
+  }
+  
+  .contact-content-vertical {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-hero-section {
+    padding: 4rem 1rem 2.5rem;
+  }
+  
+  .hero-title {
+    font-size: 1.8rem;
+  }
+  
+  .contact-info-section,
+  .enquire-now-section {
+    padding: 2rem;
+  }
+  
+  .contact-info-cards {
+    gap: 1.5rem;
+  }
+  
+  .contact-card {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+    padding: 1.5rem;
+  }
+  
+  .card-icon {
+    margin-top: 0;
+    font-size: 1.8rem;
+  }
+  
+  .section-title-main {
+    font-size: 1.6rem;
+  }
+}
+
+/* Font styling */
+.contact-us-container {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+.hero-title,
+.hero-subtitle,
+.section-title-main {
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}

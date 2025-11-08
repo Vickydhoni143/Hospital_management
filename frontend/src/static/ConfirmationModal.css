@@ -1,0 +1,143 @@
+/* src/static/ConfirmationModal.css */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+}
+
+.confirmation-modal {
+  background: white;
+  border-radius: 16px;
+  padding: 30px;
+  max-width: 450px;
+  width: 90%;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: modalSlideIn 0.3s ease-out;
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-30px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #f0f4f8;
+}
+
+.modal-icon {
+  font-size: 32px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #f8f9fa;
+}
+
+.modal-icon.danger {
+  background: #ffe6e6;
+  color: #dc3545;
+}
+
+.modal-header h3 {
+  margin: 0;
+  color: #333;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.modal-body {
+  margin-bottom: 25px;
+}
+
+.modal-body p {
+  margin: 0;
+  color: #666;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.modal-footer {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+.modal-btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.modal-btn-cancel {
+  background: #f8f9fa;
+  color: #666;
+  border: 1px solid #e1e5e9;
+}
+
+.modal-btn-cancel:hover {
+  background: #e9ecef;
+  transform: translateY(-1px);
+}
+
+.modal-btn-confirm {
+  color: white;
+  box-shadow: 0 4px 12px rgba(220, 53, 69, 0.3);
+}
+
+.modal-btn-confirm.danger {
+  background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+}
+
+.modal-btn-confirm.danger:hover {
+  background: linear-gradient(135deg, #c82333 0%, #a71e2a 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 15px rgba(220, 53, 69, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .confirmation-modal {
+    padding: 20px;
+    margin: 20px;
+  }
+  
+  .modal-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+  
+  .modal-footer {
+    flex-direction: column;
+  }
+  
+  .modal-btn {
+    width: 100%;
+  }
+}

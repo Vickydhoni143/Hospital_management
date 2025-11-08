@@ -1,0 +1,542 @@
+/* Search and Filter Styles */
+.search-filter-section {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.search-box {
+  position: relative;
+  flex: 1;
+  min-width: 300px;
+}
+
+.search-box i {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #666;
+}
+
+.search-input {
+  width: 100%;
+  padding: 12px 15px 12px 45px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #e53935;
+}
+
+.filter-dropdown {
+  min-width: 200px;
+}
+
+.filter-select {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: white;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+.filter-select:focus {
+  outline: none;
+  border-color: #e53935;
+}
+
+/* Table Styles */
+.table-container {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.doctors-table,
+.patients-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.doctors-table th,
+.doctors-table td,
+.patients-table th,
+.patients-table td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.doctors-table th,
+.patients-table th {
+  background-color: #f8f9fa;
+  font-weight: 600;
+  color: #333;
+  border-bottom: 2px solid #e53935;
+}
+
+.doctors-table tr:hover,
+.patients-table tr:hover {
+  background-color: #f8f9fa;
+}
+
+/* Status Badges */
+.status-badge {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.status-confirmed {
+  background-color: #e8f5e8;
+  color: #2e7d32;
+}
+
+.status-pending {
+  background-color: #fff3e0;
+  color: #ef6c00;
+}
+
+.status-completed {
+  background-color: #e3f2fd;
+  color: #1565c0;
+}
+
+.status-cancelled {
+  background-color: #ffebee;
+  color: #c62828;
+}
+
+/* Edit Button */
+.edit-btn {
+  padding: 8px 16px;
+  font-size: 0.9rem;
+}
+
+.edit-btn i {
+  margin-right: 5px;
+}
+
+/* No Data Message */
+.no-data-message {
+  text-align: center;
+  padding: 40px;
+  color: #666;
+  font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .search-filter-section {
+    flex-direction: column;
+  }
+  
+  .search-box,
+  .filter-dropdown {
+    min-width: 100%;
+  }
+  
+  .doctors-table,
+  .patients-table {
+    display: block;
+    overflow-x: auto;
+  }
+  
+  .doctors-table th,
+  .doctors-table td,
+  .patients-table th,
+  .patients-table td {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Status Dropdown Styles */
+.status-select {
+  padding: 6px 12px;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 120px;
+}
+
+.status-select:focus {
+  outline: none;
+  border-color: #e53935;
+}
+
+/* Status-specific dropdown colors */
+.status-select.status-pending {
+  background-color: #fff3e0;
+  color: #ef6c00;
+  border-color: #ffb74d;
+}
+
+.status-select.status-confirmed {
+  background-color: #e8f5e8;
+  color: #2e7d32;
+  border-color: #81c784;
+}
+
+.status-select.status-completed {
+  background-color: #e3f2fd;
+  color: #1565c0;
+  border-color: #64b5f6;
+}
+
+.status-select.status-cancelled {
+  background-color: #ffebee;
+  color: #c62828;
+  border-color: #e57373;
+}
+
+/* Medical Report Section Styles */
+.medical-report-section {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.report-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.report-name {
+  font-size: 0.8rem;
+  color: #666;
+  max-width: 120px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.upload-btn, .view-btn {
+  padding: 6px 12px;
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+
+.view-btn {
+  padding: 6px 8px;
+}
+
+.upload-btn i, .view-btn i {
+  margin-right: 4px;
+}
+
+/* Table responsive adjustments */
+.patients-table th:nth-child(1) { width: 100px; } /* Patient ID */
+.patients-table th:nth-child(2) { width: 120px; } /* Patient Name */
+.patients-table th:nth-child(3) { width: 60px; }  /* Age */
+.patients-table th:nth-child(4) { width: 80px; }  /* Gender */
+.patients-table th:nth-child(5) { width: 150px; } /* Doctor Name */
+.patients-table th:nth-child(6) { width: 120px; } /* Department */
+.patients-table th:nth-child(7) { width: 150px; } /* Appointment Status */
+.patients-table th:nth-child(8) { width: 140px; } /* Medical Report */
+
+.doctors-table th:nth-child(1) { width: 100px; } /* Doctor ID */
+.doctors-table th:nth-child(2) { width: 150px; } /* Doctor Name */
+.doctors-table th:nth-child(3) { width: 120px; } /* Specialization */
+.doctors-table th:nth-child(4) { width: 100px; } /* Shift */
+.doctors-table th:nth-child(5) { width: 150px; } /* Timings */
+.doctors-table th:nth-child(6) { width: 120px; } /* Days */
+.doctors-table th:nth-child(7) { width: 100px; } /* Actions */
+
+/* Hover effects for interactive elements */
+.status-select:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.upload-btn:hover, .view-btn:hover {
+  transform: translateY(-1px);
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 1024px) {
+  .patients-table th,
+  .patients-table td,
+  .doctors-table th,
+  .doctors-table td {
+    padding: 10px 8px;
+    font-size: 0.85rem;
+  }
+  
+  .status-select {
+    min-width: 100px;
+    font-size: 0.8rem;
+    padding: 4px 8px;
+  }
+  
+  .upload-btn, .view-btn {
+    font-size: 0.75rem;
+    padding: 4px 8px;
+  }
+}
+
+@media (max-width: 768px) {
+  .table-container {
+    overflow-x: auto;
+  }
+  
+  .patients-table,
+  .doctors-table {
+    min-width: 1000px;
+  }
+  
+  .medical-report-section {
+    flex-direction: column;
+    gap: 4px;
+  }
+  
+  .report-actions {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+}
+
+/* Manage Appointments Styles */
+.management-section {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.feedback-message {
+  margin-bottom: 20px;
+  padding: 12px 15px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.feedback-message.success {
+  background: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.feedback-message.error {
+  background: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.feedback-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.feedback-close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.action-completed {
+  color: #666;
+  font-style: italic;
+}
+
+.hospital-btn-warning {
+  background: #ffc107;
+  border-color: #ffc107;
+  color: #212529;
+}
+
+.hospital-btn-warning:hover {
+  background: #e0a800;
+  border-color: #e0a800;
+}
+
+.hospital-btn-success {
+  background: #28a745;
+  border-color: #28a745;
+  color: white;
+}
+
+.hospital-btn-success:hover {
+  background: #218838;
+  border-color: #218838;
+}
+
+.btn-sm {
+  padding: 6px 12px;
+  font-size: 0.85rem;
+}
+
+/* Status badges for appointments */
+.status-badge {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.status-pending {
+  background-color: #fff3e0;
+  color: #ef6c00;
+}
+
+.status-confirmed {
+  background-color: #e8f5e8;
+  color: #2e7d32;
+}
+
+.status-completed {
+  background-color: #e3f2fd;
+  color: #1565c0;
+}
+
+.status-cancelled {
+  background-color: #ffebee;
+  color: #c62828;
+}
+
+/* Loading styles */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #e53935;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* No data message */
+.no-data-message {
+  text-align: center;
+  padding: 60px 20px;
+  color: #666;
+}
+
+.no-data-message i {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  color: #bdc3c7;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .management-section {
+    padding: 20px;
+  }
+  
+  .action-buttons {
+    flex-direction: column;
+  }
+  
+  .patients-table {
+    font-size: 0.85rem;
+  }
+  
+  .patients-table th,
+  .patients-table td {
+    padding: 8px 6px;
+  }
+}
+
+/* Add to your existing CSS file */
+
+/* Action Buttons */
+.action-buttons {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.hospital-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  font-family: inherit;
+}
+
+.hospital-btn-primary {
+  background: #1e88e5;
+  color: white;
+}
+
+.hospital-btn-primary:hover {
+  background: #1565c0;
+  transform: translateY(-1px);
+}
+
+.hospital-btn-danger {
+  background: #dc3545;
+  color: white;
+}
+
+.hospital-btn-danger:hover {
+  background: #c82333;
+  transform: translateY(-1px);
+}
+
+.hospital-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+/* Table responsive adjustments */
+@media (max-width: 768px) {
+  .action-buttons {
+    flex-direction: column;
+  }
+  
+  .hospital-btn {
+    font-size: 11px;
+    padding: 6px 10px;
+  }
+}

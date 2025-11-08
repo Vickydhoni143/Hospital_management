@@ -1,0 +1,841 @@
+/* src/static/LoginPage.css */
+.login-portal-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1e88e5 0%, #43a047 100%);
+  padding: 40px 20px;
+  flex: 1;
+}
+
+.login-portal-card {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+  padding: 60px 50px;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  min-height: 700px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+/* Role Selection View */
+.role-selection-view {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 60px;
+  padding-bottom: 40px;
+  border-bottom: 2px solid #f0f4f8;
+}
+
+.login-header .hospital-logo h1 {
+  color: #1e88e5;
+  margin: 0 0 20px 0;
+  font-size: 42px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.portal-description {
+  color: #666;
+  font-size: 20px;
+  margin: 0;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+.role-cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 35px;
+  margin: 50px 0 70px 0;
+}
+
+.role-card {
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  border: 2px solid #e9ecef;
+  border-radius: 20px;
+  padding: 50px 35px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  position: relative;
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.role-card:hover {
+  transform: translateY(-12px);
+  border-color: #1e88e5;
+  box-shadow: 0 20px 40px rgba(30, 136, 229, 0.2);
+}
+
+.role-card:nth-child(1):hover {
+  border-color: #1e88e5;
+  box-shadow: 0 20px 40px rgba(30, 136, 229, 0.2);
+}
+
+.role-card:nth-child(2):hover {
+  border-color: #43a047;
+  box-shadow: 0 20px 40px rgba(67, 160, 71, 0.2);
+}
+
+.role-card:nth-child(3):hover {
+  border-color: #26a69a;
+  box-shadow: 0 20px 40px rgba(38, 166, 154, 0.2);
+}
+
+.role-icon {
+  font-size: 64px;
+  margin-bottom: 30px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.role-card h3 {
+  color: #333;
+  margin: 0 0 25px 0;
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.role-card p {
+  color: #666;
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.7;
+  flex-grow: 1;
+}
+
+.role-arrow {
+  color: #1e88e5;
+  font-size: 32px;
+  font-weight: bold;
+  margin-top: 25px;
+  opacity: 0;
+  transition: all 0.3s ease;
+  transform: translateX(-5px);
+}
+
+.role-card:hover .role-arrow {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.role-card:nth-child(1):hover .role-arrow {
+  color: #1e88e5;
+}
+
+.role-card:nth-child(2):hover .role-arrow {
+  color: #43a047;
+}
+
+.role-card:nth-child(3):hover .role-arrow {
+  color: #26a69a;
+}
+
+/* Login Form View */
+.login-form-view {
+  max-width: 520px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.back-button {
+  background: none;
+  border: none;
+  color: #1e88e5;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 35px;
+  padding: 12px 0;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  align-self: flex-start;
+}
+
+.back-button:hover {
+  color: #1565c0;
+  transform: translateX(-3px);
+}
+
+.form-header {
+  text-align: center;
+  margin-bottom: 45px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #f0f4f8;
+}
+
+.form-header h2 {
+  color: #1e88e5;
+  margin: 0 0 15px 0;
+  font-size: 36px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+}
+
+.form-header p {
+  color: #666;
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+/* Auth Toggle */
+.auth-toggle {
+  display: flex;
+  background: #f8f9fa;
+  border-radius: 14px;
+  padding: 8px;
+  margin-bottom: 40px;
+  border: 1px solid #e9ecef;
+}
+
+.toggle-btn {
+  flex: 1;
+  padding: 16px;
+  border: none;
+  background: transparent;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  font-size: 16px;
+  color: #666;
+}
+
+.toggle-btn.active {
+  background: white;
+  box-shadow: 0 4px 12px rgba(30, 136, 229, 0.2);
+  color: #1e88e5;
+  border: 1px solid #e1e5e9;
+}
+
+/* Form Styles */
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 12px;
+  font-weight: 600;
+  color: #333;
+  font-size: 15px;
+}
+
+.form-group input,
+.form-group select {
+  padding: 18px;
+  border: 2px solid #e1e5e9;
+  border-radius: 12px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  font-family: inherit;
+  background: #ffffff;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #1e88e5;
+  box-shadow: 0 0 0 4px rgba(30, 136, 229, 0.15);
+  background: #ffffff;
+}
+
+/* Centered Role Display */
+.form-group.role-group {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.role-display {
+  padding: 18px;
+  border: 2px solid #e1e5e9;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  font-size: 16px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.role-badge {
+  background: linear-gradient(135deg, #1e88e5 0%, #43a047 100%);
+  color: white;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 16px;
+  display: inline-block;
+  box-shadow: 0 4px 12px rgba(30, 136, 229, 0.25);
+  text-align: center;
+  min-width: 140px;
+  letter-spacing: 0.5px;
+}
+
+/* Form Options */
+.form-options {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 15px;
+  margin: 15px 0;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #666;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  accent-color: #1e88e5;
+}
+
+/* Buttons */
+.submit-btn {
+  background: linear-gradient(135deg, #1e88e5 0%, #1565c0 100%);
+  color: white;
+  border: none;
+  padding: 20px;
+  border-radius: 14px;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+  font-family: inherit;
+  letter-spacing: 0.5px;
+  box-shadow: 0 6px 20px rgba(30, 136, 229, 0.4);
+}
+
+.submit-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(30, 136, 229, 0.5);
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+}
+
+.link-btn {
+  background: none;
+  border: none;
+  color: #1e88e5;
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: inherit;
+  font-family: inherit;
+  padding: 0;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.link-btn:hover {
+  color: #1565c0;
+}
+
+.switch-auth {
+  text-align: center;
+  color: #666;
+  font-size: 16px;
+  margin-top: 35px;
+  padding-top: 25px;
+  border-top: 1px solid #f0f4f8;
+}
+
+/* Error Styles */
+.form-group input.error {
+  border-color: #ff4444 !important;
+  box-shadow: 0 0 0 3px rgba(255, 68, 68, 0.1) !important;
+}
+
+.error-message {
+  color: #ff4444;
+  font-size: 12px;
+  margin-top: 5px;
+  display: block;
+  font-weight: 500;
+}
+
+/* Password Strength Indicator */
+.password-strength-indicator {
+  margin-top: 10px;
+}
+
+.strength-bar {
+  width: 100%;
+  height: 6px;
+  background-color: #e0e0e0;
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: 5px;
+}
+
+.strength-fill {
+  height: 100%;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.strength-label {
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.password-requirements {
+  background-color: #f8f9fa;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+  margin-top: 8px;
+}
+
+.password-requirements h5 {
+  margin: 0 0 8px 0;
+  font-size: 12px;
+  color: #666;
+  font-weight: 600;
+}
+
+.password-requirements ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.password-requirements li {
+  font-size: 11px;
+  color: #999;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+}
+
+.password-requirements li:before {
+  content: "•";
+  margin-right: 6px;
+  font-size: 14px;
+}
+
+.password-requirements li.met {
+  color: #00C851;
+  font-weight: 600;
+}
+
+.password-requirements li.met:before {
+  content: "✓";
+  color: #00C851;
+}
+
+/* Form group spacing adjustment */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+/* Feedback Message Styles */
+.feedback-message {
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin: 15px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  animation: slideInUp 0.3s ease-out;
+  border: 1px solid transparent;
+}
+
+.feedback-message.success {
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+  color: #155724;
+}
+
+.feedback-message.error {
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+  color: #721c24;
+}
+
+.feedback-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+}
+
+.feedback-content i {
+  font-size: 16px;
+}
+
+.feedback-message.success .feedback-content i {
+  color: #28a745;
+}
+
+.feedback-message.error .feedback-content i {
+  color: #dc3545;
+}
+
+.feedback-close {
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.feedback-close:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Animation for feedback message */
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .login-portal-card {
+    max-width: 90%;
+    padding: 50px 40px;
+  }
+  
+  .role-cards-container {
+    gap: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .login-portal-card {
+    padding: 40px 30px;
+    max-width: 95%;
+    min-height: auto;
+  }
+
+  .role-cards-container {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    margin: 40px 0 50px 0;
+  }
+
+  .login-header .hospital-logo h1 {
+    font-size: 32px;
+  }
+
+  .portal-description {
+    font-size: 18px;
+  }
+
+  .form-header h2 {
+    font-size: 30px;
+  }
+
+  .form-options {
+    flex-direction: column;
+    gap: 18px;
+    align-items: flex-start;
+  }
+
+  .role-card {
+    padding: 40px 30px;
+    min-height: 240px;
+  }
+
+  .role-icon {
+    font-size: 56px;
+    height: 70px;
+  }
+
+  .role-badge {
+    min-width: 120px;
+    padding: 10px 25px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-portal-container {
+    padding: 20px 15px;
+  }
+  
+  .login-header .hospital-logo h1 {
+    font-size: 28px;
+  }
+  
+  .form-header h2 {
+    font-size: 26px;
+  }
+  
+  .auth-toggle {
+    flex-direction: column;
+    gap: 6px;
+  }
+  
+  .toggle-btn {
+    padding: 14px;
+  }
+  
+  .login-portal-card {
+    padding: 30px 20px;
+  }
+
+  .role-badge {
+    min-width: 100px;
+    padding: 8px 20px;
+    font-size: 14px;
+  }
+}
+
+/* Loading state for buttons */
+.submit-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Animation for form transitions */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.login-form-view {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.role-selection-view {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .password-requirements {
+    padding: 10px;
+  }
+  
+  .password-requirements h5 {
+    font-size: 11px;
+  }
+  
+  .password-requirements li {
+    font-size: 10px;
+  }
+}
+
+/* Ensure feedback message doesn't break layout on mobile */
+@media (max-width: 480px) {
+  .feedback-message {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+  
+  .feedback-content {
+    gap: 8px;
+  }
+}
+
+
+/* Add these styles to your existing LoginPage.css */
+
+/* Admin Verification View */
+.admin-verification-view {
+  max-width: 520px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.verification-header {
+  text-align: center;
+  margin-bottom: 45px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #f0f4f8;
+}
+
+.verification-header h2 {
+  color: #1e88e5;
+  margin: 20px 0 15px 0;
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+}
+
+.verification-header p {
+  color: #666;
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.security-icon {
+  font-size: 64px;
+  margin-bottom: 20px;
+}
+
+.verification-form {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  margin-bottom: 40px;
+}
+
+.security-input {
+  border: 2px solid #e1e5e9 !important;
+  background: #fff !important;
+  font-family: monospace !important;
+  font-size: 18px !important;
+  letter-spacing: 2px !important;
+  text-align: center !important;
+}
+
+.security-input:focus {
+  border-color: #1e88e5 !important;
+  box-shadow: 0 0 0 4px rgba(30, 136, 229, 0.15) !important;
+}
+
+.security-hint {
+  color: #666;
+  font-size: 14px;
+  margin-top: 8px;
+  display: block;
+  font-style: italic;
+}
+
+.security-btn {
+  background: linear-gradient(135deg, #1e88e5 0%, #1565c0 100%) !important;
+  margin-top: 20px;
+}
+
+.security-note {
+  background: #fff3cd;
+  border: 1px solid #ffeaa7;
+  border-radius: 12px;
+  padding: 25px;
+  margin-top: 30px;
+}
+
+.security-note h4 {
+  color: #856404;
+  margin: 0 0 12px 0;
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.security-note p {
+  color: #856404;
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Admin Card Security Badge */
+.admin-card {
+  position: relative;
+}
+
+.security-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 100%);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(255, 107, 107, 0.3);
+}
+
+.admin-card .role-icon {
+  color: #1e88e5;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .verification-header h2 {
+    font-size: 28px;
+  }
+  
+  .security-icon {
+    font-size: 56px;
+  }
+  
+  .security-badge {
+    top: 10px;
+    right: 10px;
+    font-size: 11px;
+    padding: 4px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .verification-header h2 {
+    font-size: 24px;
+  }
+  
+  .security-note {
+    padding: 20px;
+  }
+}
