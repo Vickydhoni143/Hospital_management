@@ -158,13 +158,7 @@ const ManageAppointments = ({ adminData }) => {
               <i className="fas fa-check-double"></i>
               Complete
             </button>
-            <button 
-              className="hospital-btn hospital-btn-warning btn-sm"
-              onClick={() => handleCancelAppointment(appointment._id)}
-            >
-              <i className="fas fa-ban"></i>
-              Cancel
-            </button>
+            
           </div>
         );
       default:
@@ -221,7 +215,6 @@ const ManageAppointments = ({ adminData }) => {
             <option value="Approved">Approved</option>
             <option value="Rejected">Rejected</option>
             <option value="Completed">Completed</option>
-            <option value="Cancelled">Cancelled</option>
           </select>
         </div>
       </div>
